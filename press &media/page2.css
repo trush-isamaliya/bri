@@ -1,0 +1,129 @@
+body ,html{
+    margin: 0px;
+    padding: 0px; 
+    color: black;
+    font-family: 'Inter',sans-serif;
+    overflow-x: hidden;
+    
+}
+
+.logo-body{
+    background-image: url(image/press-media-945231.jpg);
+    background-repeat: no-repeat ;
+    width: 100%;
+    height: 400px;
+    background-size: cover;   
+                                                                     
+}
+.navbar {
+    display: flex;
+   
+    justify-content: space-between;
+    align-items: center;
+   padding: 10px 20px;
+}
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+.navbar .logo img {
+    width: 190px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.navbar .icons {
+    display: flex;
+    align-items: center;
+}
+.navbar .icons i {
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+/* content1--------------- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .content {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar h2 {
+        font-size: 16px;
+    }
+    .content .meta {
+        font-size: 12px;
+    }
+    .content h1 {
+        font-size: 16px;
+    }
+}
+.container {
+    display: flex;
+    padding: 20px;
+}
+.sidebar {
+    width: 200px;
+}
+.content {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+.sidebar h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.sidebar ul li span {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+.sidebar ul li.active span {
+    color: black;
+}
+.sidebar ul li.inactive span {
+    color: #ccc;
+}
+.content .meta {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.content h1 {
+    font-size: 18px;
+    margin: 0;
+}
+.content .underline {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    width: 100%;
+}
+.content .item {
+    margin-bottom: 20px;
+}

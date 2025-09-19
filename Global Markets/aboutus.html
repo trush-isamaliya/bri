@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<!-- menubar------------- -->
+<script>
+    function toggleSidebar() {
+             document.getElementById('sidebar').classList.toggle('active');
+         }
+ 
+         function toggleDropdown(element) {
+             var dropdowns = document.querySelectorAll('.dropdown-toggle');
+             dropdowns.forEach(function(dropdown) {
+                 if (dropdown !== element) {
+                     dropdown.classList.remove('active');
+                     dropdown.classList.add('inactive');
+                 } else {
+                     dropdown.classList.toggle('active');
+                     dropdown.classList.toggle('inactive');
+                 }
+             });
+         }
+ 
+         document.addEventListener('click', function(event) {
+             var sidebar = document.getElementById('sidebar');
+             var isClickInsideSidebar = sidebar.contains(event.target);
+             var isClickOnMenuIcon = event.target.classList.contains('menu-icon');
+ 
+             if (!isClickInsideSidebar && !isClickOnMenuIcon) {
+                 sidebar.classList.remove('active');
+             }
+         });
+</script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+         <img alt="Company Logo" height="40" src="image/logo (1).svg" width="40"/>
+         <!-- <h1>
+          BRITANNIA
+         </h1> -->
+        </div>
+        <div class="nav">
+         <i class="fas fa-search">
+         </i>
+         <i class="fas fa-bars">
+         </i>
+        </div>
+        <div class="breadcrumb">
+         <div class="breadcrumb1">
+            <a href="#">
+          Home
+         </a>
+         <span class="dot">
+          •
+         </span>
+         <a href="#">
+            Global Investments
+         </a>
+         <span class="dot">
+          •
+         </span>
+         <a href="#" style=" color:#9E9E9E;">
+            About Us
+         </a>
+        </div>
+        <div class="breadcrumb2">
+        <p>
+            About us
+        </p>
+        </div>
+       </div>
+    </div>  
+    <!-- sudd---------------------------- -->
+
+    <div class="content2">
+    <div class="cont3">
+        <p>About us</p>
+    </div>
+    <div class="cont4">
+       
+    <div class="item">
+        
+        <a href="#">Company Profile</a>
+    </div>
+    <div class="item1">
+        
+        <a href="#">MiFID II</a>
+    </div>
+    <div class="item1">
+        
+        <a href="#">Compliance Policies and Disclosures</a>
+    </div>
+</div>
+</div>
+ <!------------footer------>
+ <div class="footer">
+    <div class="footer-row">
+    <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="#">About us</a>
+        <a href="#">Careers</a>
+        <a href="#">Press & Media</a>
+        <a href="#">Contact us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Use of Cookies</a>
+    </div>
+    <div class="footer-column">
+        <h3>Services</h3>
+        <a href="#">Global Markets</a>
+        <a href="#">Global Investments</a>
+        <a href="#">Bank & Trust</a>
+        <a href="#">Securities</a>
+    </div>
+    <div class="footer-column">
+        <h3> Address</h3>
+        <p>Britannia Global Investments Limited
+            Level 29, 52 Lime Street, London
+            EC3M 7AF, United Kingdom
+            </p>
+        <h4>Email</h4>
+        <p>bgi@britannia.com</p>
+        <h4>Phone</h4>
+        <p>+44 (0) 203 931 7950</p>
+    </div>
+</div>
+<div class="footer-bottom">
+    <div class="footer-b">
+    <p>Britannia Global Markets Limited is a company registered in England and Wales (number 01969442) with it registered office at Level 29, 52 Lime Street, London, EC3M 7AF, United Kingdom. The contents of this site are for general information purposes only. Nothing on this website constitutes advice or a recommendation. CFDs, Futures, Options and other derivative products are complex instruments and come with a high risk of losing money due to leverage. You should consider whether you understand how they work and whether you can afford to take the high risk of losing your money. Professional clients can lose more than they deposit. All trading involves risk. Past performance is not indicative of future results. The information on this site is not directed at residents of the United States or any particular country outside of the UK and is not for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation. Information contained on this website has been obtained from sources believed to be reliable but it is not necessarily all inclusive and is not guaranteed as to the accuracy and is not to be construed as a representation by Britannia Global Markets Limited. The copyright in all material on this site is vested in Britannia Global Markets Limited. You may not copy any part of this site or do any other act in relation to any part of this site which is prohibited by copyright. Whilst we endeavour to ensure that this site is normally available 24 hours a day, we will not be liable if for any reason the site is unavailable at any time or for any period. Britannia Global Markets is authorised and regulated by the Financial Conduct Authority (Registered no. 114159)</p>
+</div>
+    <div class="footer-b">
+    <p>© 2024 Britannia Financial Group Limited</p>
+</div>
+</div>
+<div class="bottom">
+    <a href="#">Back to top</a>
+</div>
+</div>
+</body>
+</html>

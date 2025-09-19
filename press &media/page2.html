@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>press and media</title>
+    <link rel="stylesheet" href="page2.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<script>
+    function changeContent(year) {
+        const content = document.querySelector('.content');
+        const sidebarItems = document.querySelectorAll('.sidebar ul li');
+
+        sidebarItems.forEach(item => {
+            item.classList.remove('active');
+            item.classList.add('inactive');
+        });
+
+        document.querySelector(`.sidebar ul li[onclick="changeContent(${year})"]`).classList.add('active');
+        document.querySelector(`.sidebar ul li[onclick="changeContent(${year})"]`).classList.remove('inactive');
+
+        if (year === 2023) {
+            content.innerHTML = `
+                <div class="item">
+                    <div class="meta">PDF · 03.02.2023</div>
+                    <h1>Organisational changes at Britannia</h1>
+                    <hr class="underline">
+                </div>
+            `;
+        } else if (year === 2022) {
+            content.innerHTML = `
+                <div class="item">
+                    <div class="meta">PDF · 22.11.2022</div>
+                    <h1>Expansion of Prime Brokerage Services</h1>
+                    <hr class="underline">
+                </div>
+                <div class="item">
+                    <div class="meta">PDF · 09.06.2022</div>
+                    <h1>Revised LME Strategic Approach</h1>
+                    <hr class="underline">
+                </div>
+                <div class="item">
+                    <div class="meta">PDF · 04.05.2022</div>
+                    <h1>The Britannia Financial Group is delighted to be supporting the Platinum Jubilee Pageant</h1>
+                    <hr class="underline">
+                </div>
+                <div class="item">
+                    <div class="meta">PDF · 21.04.2022</div>
+                    <h1>Acquisition of Alphaplate and Launch of Britannia Digital</h1>
+                    <hr class="underline">
+                </div>
+                <div class="item">
+                    <div class="meta">PDF · 18.01.2022</div>
+                    <h1>Appointment of Head of Strategy</h1>
+                    <hr class="underline">
+                </div>
+            `;
+        } else if (year === 2021) {
+            content.innerHTML = `
+                <div class="item">
+                    <div class="meta">PDF · 21.09.2021</div>
+                    <h1>Britannia Global Markets launches Prime offering</h1>
+                    <hr class="underline">
+                </div>
+                <div class="item">
+                    <div class="meta">PDF · 15.07.2021</div>
+                    <h1>Press Release announcing the acquisition of cisca. £900 million of assets and cash from Dolfin Financial Limited (UK) in Special Administration</h1>
+                    <hr class="underline">
+                </div>
+                <div class="item">
+                    <div class="meta">PDF · 22.04.2021</div>
+                    <h1>Britannia expands Energy offering with new hires and approval of ICE Futures Europe Membership</h1>
+                    <hr class="underline">
+                </div>
+                <div class="item">
+                    <div class="meta">PDF · 23.03.2021</div>
+                    <h1>Appointment of Head of Softs and Agricultural Commodities</h1>
+                    <hr class="underline">
+                </div>
+                <div class="item">
+                    <div class="meta">PDF · 18.01.2021</div>
+                    <h1>Category 2 membership of The London Metal Exchange</h1>
+                    <hr class="underline">
+                </div>
+            `;
+        }
+    }
+</script>
+</head>
+<body>
+
+    <div class="logo-body">
+    <div class="navbar">
+        <div class="logo">
+         <img alt="Britannia logo" height="40" src="image/logo.svg" width="40"/>
+        </div>
+        <div class="icons">
+         <i class="fas fa-search">
+         </i>
+         <label for="openSidebar"><i class="fas fa-bars"></i></label>
+         </i>
+        </div>
+       </div>
+    </div>
+  
+    <!-- sudd---------------------------- -->
+    <div class="container">
+        <div class="sidebar">
+            <h2>Select a year</h2>
+            <ul>
+                <li class="active" onclick="changeContent(2023)"><span>&#8226;</span> 2023</li>
+                <li class="inactive" onclick="changeContent(2022)"><span>&#8226;</span> 2022</li>
+                <li class="inactive" onclick="changeContent(2021)"><span>&#8226;</span> 2021</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="meta">PDF · 03.02.2023</div>
+            <h1>Organisational changes at Britannia</h1>
+            <hr class="underline">
+        </div>
+    </div>
+
+</body>
+</html>

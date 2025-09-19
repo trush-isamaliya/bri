@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trade</title>
+    <link rel="stylesheet" href="trade.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<!-- menubar------------- -->
+<script>
+    function toggleSidebar() {
+             document.getElementById('sidebar').classList.toggle('active');
+         }
+ 
+         function toggleDropdown(element) {
+             var dropdowns = document.querySelectorAll('.dropdown-toggle');
+             dropdowns.forEach(function(dropdown) {
+                 if (dropdown !== element) {
+                     dropdown.classList.remove('active');
+                     dropdown.classList.add('inactive');
+                 } else {
+                     dropdown.classList.toggle('active');
+                     dropdown.classList.toggle('inactive');
+                 }
+             });
+         }
+ 
+         document.addEventListener('click', function(event) {
+             var sidebar = document.getElementById('sidebar');
+             var isClickInsideSidebar = sidebar.contains(event.target);
+             var isClickOnMenuIcon = event.target.classList.contains('menu-icon');
+ 
+             if (!isClickInsideSidebar && !isClickOnMenuIcon) {
+                 sidebar.classList.remove('active');
+             }
+         });
+</script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+         <img alt="Company Logo" height="40" src="image/logo (1).svg" width="40"/>
+         <!-- <h1>
+          BRITANNIA
+         </h1> -->
+        </div>
+        <div class="nav">
+         <i class="fas fa-search">
+         </i>
+         <i class="fas fa-bars menu-icon" onclick="toggleSidebar()"></i>
+        </i>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <i class="fas fa-times close-icon" onclick="toggleSidebar()">
+            </i>
+            <div>
+             <h2>
+              Britannia Financial Group
+             </h2>
+             <div class="dropdown-toggle" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right icon"></i>
+              About us
+             </div>
+             <div class="dropdown">
+              <a href="../about/overview.html">Overview </a>
+              <a href="../about/history.html">History and Tradition</a>
+              <a href="../about/philosophy.html">Our Philosophy</a>
+              <a href="../about/offices.html">Global Offices</a>
+             </div>
+             <div class="dropdown-toggle" onclick="toggleDropdown(this)">
+              <p>Press &amp; Media</p>
+             </div>
+             <div class="dropdown-toggle" onclick="toggleDropdown(this)">
+             <p> Careers</p>
+             </div>
+             
+             <h2>
+              Our Companies
+             </h2>
+             <div class="dropdown-toggle" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right icon"></i>
+              Global Markets
+             </div>
+             <div class="dropdown">
+              <a href="../Global Markets/overview.html"> Overview </a>
+              <a href="../Global Markets/trading.html"> Trading</a>
+              <a href="../Global Markets/platform.html"> Platforms</a>
+              <a href="../Global Markets/service.html"> Services</a>
+              <a href="../Global Markets/resource.html"> Resources</a>
+              <a href="../Global Markets/aboutus.html"> About us</a>
+              <a href="../Global Markets/account.html"> Open an Account</a>
+              <a href="../Global Markets/contact.html">Contact us</a>
+             </div>
+             <div class="dropdown-toggle" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right icon"></i>
+              Global Investments
+             </div>
+             <div class="dropdown">
+                 <a href="../Global Investments/overviews.html"> Overview </a>
+                 <a href="../Global Investments/trade.html"> Trading</a>
+                 <a href="../Global Investments/about.html"> About us</a>
+                 <a href="../Global Investments/terms.html"> Terms & Agreements</a>
+                 <a href="../Global Markets/contact.html">Contact us</a>
+             </div>
+             <div class="dropdown-toggle" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right icon"></i>
+              Bank &amp; Trust
+             </div>
+             <div class="dropdown">
+                 <a href="../Bank & Trust/page6,1.html"> Overview </a>
+                 <a href="../Bank & Trust/page6,2.html"> Banking Services </a>
+                 <a href="../Bank & Trust/page6,3.html"> Trust Services</a>
+                 <a href="../Bank & Trust/page6,4.html">  E-Banking</a>
+                 <a href="../Global Markets/contact.html">Contact us</a>
+             </div>
+             <div class="dropdown-toggle" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right icon"></i>
+              Securities
+             </div>
+             <div class="dropdown">
+                 <a href="../Securities/page7,1.html"> Overview </a>
+                 <a href="../Securities/page7,2.html"> Broker-Dealer </a>
+                 <a href="../Securities/page7,3.html">Wealth Management</a>
+                 <a href="../Securities/page7,4.html"> Asset Management</a>
+                 <a href="../Securities/page7,5.html"> M&A Advisory</a>
+                 <a href="../Global Markets/contact.html">Contact us</a>
+             </div>
+            </div>
+            <div>
+             <h2>
+              Offices local time
+             </h2>
+             <p>
+              07:09 in London
+             </p>
+             <p>
+              02:09 in Nassau
+             </p>
+            </div>
+           </div>
+        <div class="breadcrumb">
+         <div class="breadcrumb1">
+            <a href="#">
+          Home
+         </a>
+         <span class="dot">
+          •
+         </span>
+         <a href="#">
+            Global Investments
+         </a>
+         <span class="dot">
+          •
+         </span>
+         <a href="#" style=" color:#9E9E9E;">
+            Trading
+         </a>
+        </div>
+        <div class="breadcrumb2">
+        <p>
+            Trading
+        </p>
+        </div>
+       </div>
+    </div>  
+  
+    <!-- sudd---------------------------- -->
+<div class="content2">
+    <div class="cont3">
+        <p>Trading</p>
+    </div>
+    <div class="cont4">
+    <div class="item">
+        
+        <a href="#">FX Trading</a>
+    </div>
+    <div class="item1">
+        
+        <a href="#">Commodity CFDs</a>
+    </div>
+    </div>
+</div>
+
+ <!------------footer------>
+ <div class="footer">
+    <div class="footer-row">
+    <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="#">About us</a>
+        <a href="#">Careers</a>
+        <a href="#">Press & Media</a>
+        <a href="#">Contact us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Use of Cookies</a>
+    </div>
+    <div class="footer-column">
+        <h3>Services</h3>
+        <a href="#">Global Markets</a>
+        <a href="#">Global Investments</a>
+        <a href="#">Bank & Trust</a>
+        <a href="#">Securities</a>
+    </div>
+    <div class="footer-column">
+        <h3> Address</h3>
+        <p>Britannia Global Investments Limited
+            Level 29, 52 Lime Street, London
+            EC3M 7AF, United Kingdom
+            </p>
+        <h4>Email</h4>
+        <p>bgi@britannia.com</p>
+        <h4>Phone</h4>
+        <p>+44 (0) 203 931 7950</p>
+    </div>
+</div>
+<div class="footer-bottom">
+    <div class="footer-b">
+    <p>CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. Britannia Global Investments Limited (“Britannia Global Investments”) is Authorised and Regulated by the Financial Conduct Authority (FRN 739949). A registered company in England and Wales, number 09879649, at registered address Level 29, 52 Lime Street, London, EC3M 7AF, United Kingdom. The information on this website is not directed or intended to be distributed to any residents of the United States, Canada, Belgium, or any country or jurisdiction where such distribution or use would be contrary to local law or regulation.</p>
+</div>
+    <div class="footer-b">
+    <p>© 2024 Britannia Financial Group Limited</p>
+</div>
+</div>
+<div class="bottom">
+    <a href="#">Back to top</a>
+</div>
+</div>
+</body>
+</html>
